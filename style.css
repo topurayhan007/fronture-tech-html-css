@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    /* Colors */
+    --color-primary: #0000c6;
+    --color-secondary: #000c23;
+    --color-accent: #3498db;
+    --color-grey-1: #444444;
+    --color-grey-2: #3a3a3a;
+    --font-primary: "Open Sans", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --title-font: "Raleway", sans-serif;
+    --sm-base-font: 0.875em; /* 14px */
+    --md-base-font: 0.9375em; /* 15px */
+    --lg-base-font: 1em; /* 16px */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    /*  */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*  */
+}
+
+ul {
+    /*  */
+}

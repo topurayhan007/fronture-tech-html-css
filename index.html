@@ -18,7 +18,12 @@
 
                 <ul class="menu">
                     <li>
-                        <a href="">Services</a>
+                        <a href="" class="sub-menu-parent">
+                            Services
+                            <span class="dropdown-icon-span">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                        </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="#software-development-services"
@@ -52,7 +57,12 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Resources</a>
+                        <a href="" class="sub-menu-parent">
+                            Resources
+                            <span class="dropdown-icon-span">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                        </a>
                         <ul class="sub-menu">
                             <li><a href="#case-studies">Case Studies</a></li>
                             <li><a href="#blog">Blog</a></li>
@@ -75,98 +85,114 @@
                     Fronture blends AI innovation with deep engineering
                     expertise to build adaptable, future-ready solutions
                     —empowering businesses of all sizes to grow, evolve, and
-                    lead in a changing world.​
+                    lead in a changing world.
                 </p>
                 <p>Interested to collaborate?</p>
                 <div id="banner-buttons-wrapper">
-                    <button class="btn btn-primary">Let's Collaborate</button>
-                    <button class="btn btn-outline">Join Us</button>
+                    <a href="/about">
+                        <button class="btn btn-primary">
+                            Let's Collaborate
+                        </button>
+                    </a>
+                    <a href="/about">
+                        <button class="btn btn-outline">Join Us</button>
+                    </a>
                 </div>
             </section>
 
-            <section id="stats-section" class="container">
-                <div class="stat-item">
-                    <img src="" alt="stat-icon" class="stat-icon" />
-                    <h2 class="stat-title">15+</h2>
-                    <p class="stat-description">Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <img src="" alt="stat-icon" class="stat-icon" />
-                    <h2 class="stat-title">100%</h2>
-                    <p class="stat-description">Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <img src="" alt="stat-icon" class="stat-icon" />
-                    <h2 class="stat-title">60+</h2>
-                    <p class="stat-description">Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <img src="" alt="stat-icon" class="stat-icon" />
-                    <h2 class="stat-title">30+</h2>
-                    <p class="stat-description">Years Experience</p>
-                </div>
-                <div class="stat-item">
-                    <img src="" alt="stat-icon" class="stat-icon" />
-                    <h2 class="stat-title">12.4✕</h2>
-                    <p class="stat-description">Years Experience</p>
+            <section id="stats-section">
+                <div class="container stats-wrapper">
+                    <div class="stat-item">
+                        <i data-lucide="star" class="stat-icon"></i>
+                        <h2 class="stat-title">15+</h2>
+                        <p class="stat-description">Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="user-round-check" class="stat-icon"></i>
+                        <h2 class="stat-title">100%</h2>
+                        <p class="stat-description">Client Retention</p>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="users" class="stat-icon"></i>
+                        <h2 class="stat-title">60+</h2>
+                        <p class="stat-description">Talented Resources</p>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="code-xml" class="stat-icon"></i>
+                        <h2 class="stat-title">30+</h2>
+                        <p class="stat-description">Tech Stacks</p>
+                    </div>
+                    <div class="stat-item">
+                        <i data-lucide="trending-up" class="stat-icon"></i>
+                        <h2 class="stat-title">12.4✕</h2>
+                        <p class="stat-description">Growth</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="experience-section" class="container">
-                <h3 class="section-heading">Industry Experience</h3>
-                <p>
-                    Our extensive knowledge of several industries enables us to
-                    create unique software solutions.
-                </p>
-                <p>Let our expertise be the trigger for your next success.</p>
-                <div class="chips-container">
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
+            <section id="experience-section">
+                <div class="container">
+                    <h3 class="section-heading">Industry Experience</h3>
+                    <p>
+                        Our extensive knowledge of several industries enables us
+                        to create unique software solutions.
+                    </p>
+                    <p>
+                        Let our expertise be the trigger for your next success.
+                    </p>
+                    <div class="chips-containers-wrapper">
+                        <div class="chips-container">
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Retail</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Healthcare</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Education</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Startup</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Fintech</p>
+                            </div>
                         </div>
-                        <p class="chip-text">Retail</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
+                        <div class="chips-container">
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Legal Services</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">E-commerce</p>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-icon-wrapper">
+                                    <i data-lucide="gift" class="chip-icon"></i>
+                                </div>
+                                <p class="chip-text">Food &amp; Restaurant</p>
+                            </div>
                         </div>
-                        <p class="chip-text">Healthcare</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">Education</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">Startup</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">Fintech</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">Legal Services</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">E-commerce</p>
-                    </div>
-                    <div class="chip">
-                        <div class="chip-icon-wrapper">
-                            <img src="" alt="chip-icon" class="chip-icon" />
-                        </div>
-                        <p class="chip-text">Food &amp; Restaurant</p>
                     </div>
                 </div>
             </section>
@@ -886,5 +912,16 @@
                 </p>
             </div>
         </footer>
+
+        <!-- Font awesome script -->
+        <script
+            src="https://kit.fontawesome.com/1207968421.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Lucid Icons -->
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        <script>
+            lucide.createIcons();
+        </script>
     </body>
 </html>

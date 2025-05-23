@@ -5,11 +5,13 @@
     --color-primary: #115cde;
     --color-secondary: #000c23;
     --color-accent: #3498db;
-    --color-accent-2: #27d6ff;
+    --color-bg: #f3f9fd;
+    --color-accent-2: #22bef9;
     --color-accent-3: #ff2674;
-    --color-accent-4: #dce7f9;
-    --color-accent-5: #dff5fd;
-    --color-accent-6: #d9ddf8;
+    --color-accent-4: #ebedfb; /* light blue */
+    --color-accent-5: #edfaff; /* light teal */
+    --color-accent-6: #d9ddf8; /* light purple */
+    --color-accent-7: #ffeef4; /* light pink */
     --color-border: rgba(52, 152, 219, 0.15);
     --color-grey-1: #444444;
     --color-grey-2: #3a3a3a;
@@ -55,6 +57,11 @@ h6 {
     font-family: var(--font-raleway);
     color: var(--color-secondary);
     margin: 0;
+}
+
+h5 {
+    font-size: var(--size-base) !important;
+    font-weight: 700;
 }
 
 p {
@@ -439,7 +446,7 @@ nav {
 }
 
 .differences-img-wrapper {
-    padding: 0 var(--size-lg);
+    padding: 0 var(--size-xl);
 }
 
 .differences-parent-tiles-wrapper {
@@ -458,14 +465,79 @@ nav {
 }
 
 .tile-title {
-    font-size: var(--size-base);
-    font-weight: 700;
     padding-bottom: 10px;
 }
 
 .tile-description {
     font-size: var(--size-sm);
     line-height: calc(var(--size-2xl) + 2px);
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--color-bg);
+}
+
+.service-tiles-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-2xl);
+}
+
+.service-tiles-wrapper:nth-of-type(1) {
+    padding: var(--size-2xl) 0;
+}
+
+.service-tiles-wrapper:nth-of-type(1) .service-tile {
+    flex: 1;
+}
+
+.service-tiles-wrapper a {
+    color: var(--color-grey-1);
+}
+
+.service-tiles-wrapper a:hover {
+    color: var(--color-grey-1);
+}
+
+.service-tile {
+    background-color: white;
+    padding: var(--size-2xl);
+    border-radius: 6px;
+    text-align: left;
+}
+
+.service-tile:hover {
+    box-shadow: 0px 0px 20px -5px rgba(52, 152, 217, 0.28);
+}
+
+.service-tile ul {
+    padding-left: 0;
+}
+
+.service-list li {
+    font-size: calc(var(--size-xs) + 1px);
+    line-height: var(--size-2xl);
+}
+
+.service-icon-wrapper {
+    background-color: var(--color-accent-5);
+    width: fit-content;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: var(--size-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+}
+
+.service-icon-wrapper .lucide {
+    stroke-width: 1.2px;
 }
 
 /* Small devices */

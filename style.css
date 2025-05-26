@@ -999,15 +999,39 @@ footer {
         font-size: var(--size-5xl);
     }
     .container {
-        max-width: 768px;
-        padding: 20px;
+        max-width: 728px;
+        padding: 60px 20px;
     }
+    .menu {
+        display: none;
+    }
+
     #banner-section p:nth-child(2) {
         max-width: 100%;
         font-size: var(--size-md);
     }
+    /* Stats Section */
     .stats-wrapper {
         justify-content: center;
+        gap: var(--size-xl);
+    }
+    .stat-item {
+        gap: var(--size-md);
+    }
+    .stat-icon {
+        width: var(--size-3xl);
+        height: var(--size-3xl);
+    }
+    .stat-item h2 {
+        font-size: var(--size-3xl);
+    }
+    .stat-item .stat-description {
+        font-size: var(--size-base);
+    }
+
+    /* Experience Section */
+    .chip-text {
+        font-size: var(--size-sm);
     }
 }
 
@@ -1018,8 +1042,10 @@ footer {
     }
     .container {
         max-width: 1024px;
-        padding: 20px;
+        padding: 100px 20px;
     }
+
+    /* Stats Section */
     .stats-wrapper {
         justify-content: center;
     }
@@ -1032,5 +1058,6 @@ footer {
     }
     .container {
         max-width: 1240px;
+        padding: 100px 20px;
     }
 }

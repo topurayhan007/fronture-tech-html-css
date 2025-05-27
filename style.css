@@ -923,22 +923,28 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
     gap: var(--size-4xl);
     flex-wrap: wrap;
 }
 
 .footer-container > div:nth-child(1) {
-    flex: 1.5;
+    /* flex: 1.5; */
+    width: 35%;
 }
 .footer-container > div:nth-child(2) {
-    flex: 0.5;
+    /* flex: 0.5; */
+    width: 14%;
 }
 .footer-container > div:nth-child(3) {
-    flex: 1;
+    /* flex: 1; */
+    width: 20%;
 }
 .footer-container > div:nth-child(4) {
-    flex: 1;
+    /* flex: 1; */
+    width: 19%;
 }
 #logo-footer {
     width: 160px;
@@ -1086,9 +1092,10 @@ footer {
     /* Banner Section */
     #banner-section {
         padding: 0;
+        min-height: calc(70vh - 120px);
     }
     #banner-section .container {
-        padding: var(--size-7xl) 0px;
+        padding: var(--size-7xl) var(--size-base);
     }
 
     #banner-section p:nth-child(2) {
@@ -1221,6 +1228,18 @@ footer {
         flex-direction: column;
         gap: var(--size-lg);
     }
+    .footer-container > div:nth-child(1) {
+        width: 100%;
+    }
+    .footer-container > div:nth-child(2) {
+        width: 100%;
+    }
+    .footer-container > div:nth-child(3) {
+        width: 100%;
+    }
+    .footer-container > div:nth-child(4) {
+        width: 100%;
+    }
     #logo-footer {
         width: var(--size-11xl);
     }
@@ -1246,6 +1265,9 @@ footer {
     }
     p {
         font-size: var(--size-sm);
+    }
+    #banner-section {
+        min-height: calc(70vh - 120px);
     }
     #banner-section .container {
         padding: var(--size-8xl) var(--size-xl);
@@ -1365,17 +1387,20 @@ footer {
         height: calc(var(--size-11xl) + 80px);
     }
     /* Footer */
+    .footer-container {
+        gap: var(--size-2xl);
+    }
     .footer-container > div:nth-child(1) {
-        width: 50%;
+        width: 38%;
     }
     .footer-container > div:nth-child(2) {
-        width: 100%;
+        width: 19%;
     }
     .footer-container > div:nth-child(3) {
-        width: 100%;
+        width: 35%;
     }
     .footer-container > div:nth-child(4) {
-        width: 100%;
+        width: 45%;
     }
 }
 

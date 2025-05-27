@@ -113,6 +113,8 @@ a:hover {
 
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
@@ -295,6 +297,9 @@ nav {
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(90deg, #dbe7f9 0%, #e7f6fb 100%);
+}
+#stats-section .container {
+    flex-direction: row;
 }
 
 .stats-wrapper {
@@ -571,7 +576,6 @@ nav {
 }
 
 .service-icon-wrapper {
-    background-color: var(--color-accent-5);
     width: fit-content;
     padding: 8px;
     border-radius: 5px;
@@ -579,6 +583,30 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.service-tile:nth-child(1) .service-icon-wrapper {
+    background-color: var(--color-accent-4);
+    color: var(--color-primary);
+}
+.service-tile:nth-child(2) .service-icon-wrapper {
+    background-color: var(--color-accent-5);
+    color: var(--color-accent-2);
+}
+.service-tile:nth-child(3) .service-icon-wrapper {
+    background-color: var(--color-accent-4);
+    color: var(--color-primary);
+}
+.service-tile:nth-child(4) .service-icon-wrapper {
+    background-color: var(--color-accent-6);
+    color: var(--color-primary);
+}
+.service-tile:nth-child(5) .service-icon-wrapper {
+    background-color: var(--color-accent-6);
+    color: var(--color-primary);
+}
+.service-tile:nth-child(6) .service-icon-wrapper {
+    background-color: var(--color-accent-5);
+    color: var(--color-accent-2);
 }
 
 .service-icon {
@@ -594,10 +622,7 @@ nav {
 .specialized-profiles-section {
     display: flex;
 }
-.specialized-profiles-section .container {
-    display: flex;
-    flex-direction: column;
-}
+
 .specialized-profiles-tiles-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -698,6 +723,7 @@ nav {
 
 /* Case Study Section */
 .case-study {
+    display: flex;
     padding-top: 0px;
 }
 
@@ -775,6 +801,7 @@ nav {
 
 /* Blogs section */
 .blogs-section {
+    display: flex;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -830,6 +857,9 @@ nav {
 }
 
 /* News and Events section */
+.news-events-section {
+    display: flex;
+}
 .news-event-tiles-wrapper {
     padding-top: var(--size-2xl);
     display: grid;
@@ -870,6 +900,7 @@ nav {
 
 /* Footer */
 footer {
+    display: flex;
     background-color: transparent;
     background-image: linear-gradient(180deg, #ffffff 0%, #e9f0f7 100%);
     font-size: var(--size-xs);
@@ -1121,6 +1152,7 @@ footer {
     .specialized-profiles-section .container {
         padding-right: 0px;
         padding-left: 0px;
+        padding-bottom: 0;
     }
     .specialized-section-description {
         padding-left: var(--size-base);
@@ -1135,13 +1167,61 @@ footer {
         border-width: 0 0 1px 0 !important;
     }
     .specialized-tile:nth-child(4n) {
-        border-bottom: 1px !important;
+        border-bottom: 1px solid #e8ecf1 !important;
     }
     .specialized-tile:nth-child(n + 9) {
-        border-bottom: 1px !important;
+        border-bottom: 1px solid #e8ecf1 !important;
     }
     .specialized-tile:last-child {
         border-bottom: 0 !important;
+    }
+    /* Case Study Section */
+    .case-study {
+        display: flex;
+    }
+    .case-study-tiles-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .case-study-tile {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Blogs Section */
+    .blog-post-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog-post-image-wrapper {
+        width: 100%;
+        height: calc(var(--size-11xl) + 60px);
+    }
+    /* News and Events Section */
+    .news-event-tiles-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .news-event-image-wrapper {
+        width: 100%;
+        height: calc(var(--size-11xl) + 80px);
+    }
+    /* Footer */
+    .footer-container p {
+        font-size: var(--size-xs);
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: var(--size-lg);
+    }
+    #logo-footer {
+        width: var(--size-11xl);
+    }
+    .footer-quick-links-list li {
+        padding-bottom: var(--size-xs);
+    }
+    .footer-services-list li {
+        padding-bottom: var(--size-xs);
+    }
+    .copyright-wrapper p {
+        font-size: var(--size-xs);
+        line-height: 1.2rem;
     }
 }
 

@@ -630,7 +630,7 @@ nav {
 }
 
 .specialized-tile {
-    padding: var(--size-xl);
+    padding: var(--size-2xl);
     border: 1px solid #e8ecf1;
     border-width: 0 1px 1px 0;
 }
@@ -725,6 +725,10 @@ nav {
 .case-study {
     display: flex;
     padding-top: 0px;
+}
+.case-study .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .case-study-tiles-wrapper {
@@ -859,6 +863,9 @@ nav {
 /* News and Events section */
 .news-events-section {
     display: flex;
+}
+.news-events-section .container {
+    padding-top: 0px;
 }
 .news-event-tiles-wrapper {
     padding-top: var(--size-2xl);

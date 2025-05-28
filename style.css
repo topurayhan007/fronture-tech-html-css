@@ -191,6 +191,21 @@ nav {
     font-weight: 500;
 }
 
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -1085,8 +1100,79 @@ footer {
     nav {
         padding: var(--size-sm) var(--size-md);
     }
+    #logo {
+        width: 150px;
+    }
+
     .menu {
         display: none;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .menu li {
+        padding: var(--size-xs) 0px;
+    }
+
+    .menu-toggle:checked + label + .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .sub-menu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 12.5rem;
+        left: calc(var(--size-xl) * -1);
+        z-index: 500;
+        padding-left: 0px;
+        background-color: white;
+        box-shadow: var(--box-shadow-1);
+        border-radius: 2px;
+        transition: all 0.4s ease-in-out;
+    }
+    .menu li:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        top: var(--size-7xl);
+        transition: all 0.4s ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + .sub-menu-label + .sub-menu {
+        max-height: 500px;
+    }
+
+    .sub-menu-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 12px 20px; */
+        cursor: pointer;
+    }
+
+    .dropdown-icon-span {
+        display: block;
+        margin-left: auto;
+        padding-left: 10px;
+    }
+
+    .menu > li > a,
+    .sub-menu a {
+        padding: 5px var(--size-xs);
+        display: block;
     }
 
     /* Banner Section */
@@ -1100,7 +1186,6 @@ footer {
 
     #banner-section p:nth-child(2) {
         max-width: 100%;
-        padding: 0 5px;
         font-size: var(--size-md);
     }
     /* Stats Section */
@@ -1266,13 +1351,74 @@ footer {
     p {
         font-size: var(--size-sm);
     }
+    /* Navbar */
+    nav {
+        padding: var(--size-sm) var(--size-md);
+    }
+    #logo {
+        width: 150px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .menu-toggle:checked + label + .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .dropdown-icon-span {
+        padding-left: 10px;
+    }
+
+    .sub-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        flex-direction: column;
+        padding-left: 1rem;
+        background: #fafafa;
+    }
+
+    input[type="checkbox"]:checked + .sub-menu-label + .sub-menu {
+        max-height: 500px;
+    }
+
+    .sub-menu-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 12px 20px; */
+        cursor: pointer;
+    }
+
+    .menu > li > a,
+    .sub-menu a {
+        padding: 12px 20px;
+        display: block;
+    }
+
+    /* Banner Section */
     #banner-section {
         min-height: calc(70vh - 120px);
     }
     #banner-section .container {
         padding: var(--size-8xl) var(--size-xl);
     }
-    /* Banner Section */
     #banner-section p:nth-child(2) {
         max-width: 75% !important;
     }

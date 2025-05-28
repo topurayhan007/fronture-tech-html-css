@@ -220,12 +220,10 @@ nav {
     padding: var(--size-base) var(--size-xs);
 }
 
-.sub-menu-parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.sub-menu-label:hover {
+    color: var(--color-accent);
 }
+
 .dropdown-icon-span {
     font-size: var(--size-md);
 }
@@ -1120,10 +1118,13 @@ footer {
         width: 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+        overflow: hidden;
     }
 
     .menu li {
         padding: var(--size-xs) 0px;
+        width: 100%;
+        text-align: left;
     }
 
     .menu-toggle:checked + label + .menu {
@@ -1137,24 +1138,30 @@ footer {
 
     .sub-menu {
         position: relative;
+        width: 100%;
         max-height: 0;
         overflow: hidden;
+        top: 0;
+        left: 0;
         transition: max-height 0.3s ease;
-        background-color: #fafafa;
         padding-left: 1.5rem;
         margin-left: 1rem;
-        border-left: 2px solid var(--color-border);
         box-shadow: none;
+    }
+    .sub-menu li {
+        border-bottom: 0;
     }
 
     input[type="checkbox"]:checked + .sub-menu-label + .sub-menu {
         max-height: 500px;
         visibility: visible;
         opacity: 1;
+        top: 0;
     }
 
     .menu > li > a,
-    .sub-menu a {
+    .sub-menu a,
+    .sub-menu-label {
         padding: 5px var(--size-xs);
         display: block;
     }
@@ -1164,6 +1171,9 @@ footer {
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+    }
+    .sub-menu-label:hover {
+        color: var(--color-accent);
     }
 
     .dropdown-icon-span {
@@ -1362,10 +1372,11 @@ footer {
     #logo {
         width: 150px;
     }
+
     .menu {
         display: none;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         padding-left: 0;
         position: absolute;
         top: 100%;
@@ -1374,6 +1385,13 @@ footer {
         width: 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+        overflow: hidden;
+    }
+
+    .menu li {
+        padding: var(--size-xs) 0px;
+        width: 100%;
+        text-align: left;
     }
 
     .menu-toggle:checked + label + .menu {
@@ -1385,35 +1403,57 @@ footer {
         margin-left: auto;
     }
 
-    .dropdown-icon-span {
-        padding-left: 10px;
-    }
-
     .sub-menu {
+        position: relative;
+        width: 100%;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        flex-direction: column;
-        padding-left: 1rem;
-        background: #fafafa;
+        top: 0;
+        left: 0;
+        transition: max-height 0.3s ease;
+        padding-left: 1.5rem;
+        margin-left: 1rem;
+        box-shadow: none;
+    }
+    .sub-menu li {
+        border-bottom: 0;
     }
 
     input[type="checkbox"]:checked + .sub-menu-label + .sub-menu {
         max-height: 500px;
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+    }
+
+    .menu > li > a,
+    .sub-menu a,
+    .sub-menu-label {
+        padding: 5px var(--size-xs);
+        display: block;
     }
 
     .sub-menu-label {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* padding: 12px 20px; */
         cursor: pointer;
     }
+    .sub-menu-label:hover {
+        color: var(--color-accent);
+    }
 
-    .menu > li > a,
-    .sub-menu a {
-        padding: 12px 20px;
+    .dropdown-icon-span {
         display: block;
+        margin-left: auto;
+        padding-left: 10px;
+    }
+
+    .menu li:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        top: var(--size-7xl);
+        transition: all 0.4s ease-in-out;
     }
 
     /* Banner Section */
@@ -1529,6 +1569,7 @@ footer {
         width: 100%;
         height: calc(var(--size-11xl) + 60px);
     }
+    /* News and Event Section */
     .news-event-tiles-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1575,6 +1616,37 @@ footer {
     }
     .stat-item .stat-description {
         font-size: var(--size-lg);
+    }
+    /* Blog Section */
+    .blog-post-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-post-image-wrapper {
+        width: 100%;
+        height: calc(var(--size-11xl) * 2);
+    }
+    /* News and Event Section */
+    .news-event-tiles-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .news-event-image-wrapper {
+        width: 100%;
+        height: calc(var(--size-11xl) * 2);
+    }
+    .footer-container {
+        gap: var(--size-2xl);
+    }
+    .footer-container > div:nth-child(1) {
+        width: 38%;
+    }
+    .footer-container > div:nth-child(2) {
+        width: 19%;
+    }
+    .footer-container > div:nth-child(3) {
+        width: 35%;
+    }
+    .footer-container > div:nth-child(4) {
+        width: 45%;
     }
 }
 

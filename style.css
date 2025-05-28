@@ -241,19 +241,23 @@ nav {
 .sub-menu {
     list-style: none;
     text-align: left;
-    width: 12.5rem; /* 200px */
     visibility: hidden;
+    width: 12.5rem; /* 200px */
     opacity: 0;
     position: absolute;
     top: 12.5rem;
     left: calc(var(--size-xl) * -1);
     z-index: 500;
-    padding-left: 0px;
     background-color: white;
-    /* box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2); */
     box-shadow: var(--box-shadow-1);
     border-radius: 2px;
+    padding-left: 0;
     transition: all 0.4s ease-in-out;
+}
+
+.menu li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
 }
 
 .sub-menu li {
@@ -1132,34 +1136,33 @@ footer {
     }
 
     .sub-menu {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        top: 12.5rem;
-        left: calc(var(--size-xl) * -1);
-        z-index: 500;
-        padding-left: 0px;
-        background-color: white;
-        box-shadow: var(--box-shadow-1);
-        border-radius: 2px;
-        transition: all 0.4s ease-in-out;
-    }
-    .menu li:hover .sub-menu {
-        visibility: visible;
-        opacity: 1;
-        top: var(--size-7xl);
-        transition: all 0.4s ease-in-out;
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #fafafa;
+        padding-left: 1.5rem;
+        margin-left: 1rem;
+        border-left: 2px solid var(--color-border);
+        box-shadow: none;
     }
 
     input[type="checkbox"]:checked + .sub-menu-label + .sub-menu {
         max-height: 500px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu > li > a,
+    .sub-menu a {
+        padding: 5px var(--size-xs);
+        display: block;
     }
 
     .sub-menu-label {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* padding: 12px 20px; */
         cursor: pointer;
     }
 
@@ -1169,10 +1172,11 @@ footer {
         padding-left: 10px;
     }
 
-    .menu > li > a,
-    .sub-menu a {
-        padding: 5px var(--size-xs);
-        display: block;
+    .menu li:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        top: var(--size-7xl);
+        transition: all 0.4s ease-in-out;
     }
 
     /* Banner Section */

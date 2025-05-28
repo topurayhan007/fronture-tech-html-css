@@ -848,7 +848,7 @@ nav {
     text-align: left;
 }
 .blog-post-image-wrapper {
-    width: 250px;
+    max-width: 250px;
     height: calc(var(--size-11xl) + 40px);
     overflow: hidden;
 }
@@ -1307,7 +1307,7 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
     .blog-post-image-wrapper {
-        width: 100%;
+        max-width: 100%;
         height: calc(var(--size-11xl) + 60px);
     }
     /* News and Events Section */
@@ -1564,7 +1564,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
     .blog-post-image-wrapper {
-        width: 100%;
+        max-width: 100%;
         height: calc(var(--size-11xl) + 60px);
     }
     /* News and Event Section */
@@ -1620,7 +1620,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
     .blog-post-image-wrapper {
-        width: 100%;
+        max-width: 100%;
         height: calc(var(--size-11xl) * 2);
     }
     /* News and Event Section */

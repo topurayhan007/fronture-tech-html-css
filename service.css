@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    /* Colors */
+    --color-primary: #115cde;
+    --color-secondary: #000c23;
+    --color-accent: #3498db;
+    --color-bg: #f3f9fd;
+    --color-accent-2: #22bef9;
+    --color-accent-3: #ff2674;
+    --color-accent-4: #ebedfb; /* light blue */
+    --color-accent-5: #edfaff; /* light teal */
+    --color-accent-6: #d9ddf8; /* light purple */
+    --color-accent-7: #ffeef4; /* light pink */
+    --color-grey-1: #444444;
+    --color-grey-2: #3a3a3a;
+    --color-border: rgba(52, 152, 219, 0.15);
+    --box-shadow-1: 0px 0px 10px 0px rgba(182, 204, 243, 0.5);
+    /* Fonts */
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-raleway: "Raleway", sans-serif;
+    /* Sizes */
+    --size-xs: 0.75rem; /*    12px  */
+    --size-sm: 0.875rem; /*   14px  */
+    --size-md: 0.938rem; /*   15px  */
+    --size-base: 1rem; /*     16px  */
+    --size-lg: 1.125rem; /*   18px  */
+    --size-xl: 1.25rem; /*    20px  */
+    --size-2xl: 1.5rem; /*    24px  */
+    --size-3xl: 1.875rem; /*  30px  */
+    --size-4xl: 2.25rem; /*   36px  */
+    --size-5xl: 2.5rem; /*    40px  */
+    --size-6xl: 3rem; /*      48px  */
+    --size-7xl: 3.5rem; /*    56px  */
+    --size-8xl: 4rem; /*      64px  */
+    --size-9xl: 4.5rem; /*    72px  */
+    --size-10xl: 6.25rem; /*  100px */
+    --size-11xl: 7.5rem; /*   120px */
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.services {
+    text-align: left;
+}
+
+.services h1 {
+    font-size: var(--size-5xl);
+    font-weight: 600;
+    color: white;
+    text-align: left;
+}
+.services .case-studies h1 {
+    color: var(--color-secondary);
+}
+
+.service-banner-section {
+    display: flex;
+    justify-content: start;
+}
+
+.service-banner-section .banner-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.service-banner-section p {
+    color: white;
+    padding-top: var(--size-base);
+}
+.services .case-studies p {
+    color: var(--color-secondary);
+}
+
+/* Services Banner */
+.service-banner-section {
+    background-color: #2f5d9b;
+    background-image: url(images/banner-Software-dev-Img-1.webp);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+.services .case-studies {
+    background-color: #e1e5ee;
+    background-image: url(images/banner-Img-case-study-1.webp);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+.service-banner-section .container {
+    padding: var(--size-9xl) var(--size-xl);
+}
+.text-section .container {
+    gap: var(--size-4xl);
+}
+.service-info h3 {
+    padding-bottom: var(--size-xs);
+}
+.services .case-study-tiles-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+}
+.services .blog-post-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+}
+.services .blog-post {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-xl);
+}
+.blogs .blog-post .blog-post-image-wrapper {
+    max-width: 250px;
+    height: calc(var(--size-11xl) + 40px);
+}
+
+/* Careers */
+.services .section-heading {
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+    .service-banner-section {
+        min-height: 500px;
+        background-image: url(images/Softdev.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .services .case-studies {
+        min-height: 500px;
+        background-color: #e1e5ee;
+        background-image: url(images/Img-3.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .services {
+        text-align: center;
+    }
+    .services h1 {
+        text-align: center;
+    }
+    .service-banner-section .banner-wrapper {
+        width: 100%;
+        align-items: center;
+    }
+    .services .blog-post {
+        flex-direction: column;
+    }
+    .blogs .blog-post .blog-post-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+    .service-banner-section {
+        min-height: 500px;
+        background-image: url(images/Softdev.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .services .case-studies {
+        min-height: 500px;
+        background-color: #e1e5ee;
+        background-image: url(images/Img-3.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .services {
+        text-align: center;
+    }
+    .services h1 {
+        text-align: center;
+    }
+    .service-banner-section .banner-wrapper {
+        width: 100%;
+        align-items: center;
+    }
+}

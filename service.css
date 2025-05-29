@@ -38,11 +38,6 @@
     --size-10xl: 6.25rem; /*  100px */
     --size-11xl: 7.5rem; /*   120px */
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 .services {
     text-align: left;
@@ -56,6 +51,9 @@
 }
 .services .case-studies h1 {
     color: var(--color-secondary);
+}
+.services .section-heading {
+    text-align: center;
 }
 
 .service-banner-section {
@@ -119,8 +117,70 @@
 }
 
 /* Careers */
-.services .section-heading {
-    text-align: center;
+.offering-section .container {
+    padding-bottom: 0px;
+}
+.offerings-wrapper {
+    padding-top: var(--size-lg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-3xl);
+}
+
+.offering {
+    display: flex;
+    justify-content: start;
+    gap: var(--size-sm);
+    text-align: left;
+}
+.offering-icon-wrapper .offering-icon {
+    color: var(--color-primary);
+}
+.offering-description {
+    padding-top: var(--size-xs);
+    line-height: 26px;
+}
+
+.jobs-wrapper {
+    padding-top: var(--size-lg);
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--size-4xl);
+    flex-wrap: wrap;
+    text-align: left;
+}
+.jobs {
+    padding: var(--size-xl);
+    border: 1px solid #e1e5f3;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 280px;
+}
+.vacancy-text {
+    color: var(--color-grey-1);
+}
+.vacancy {
+    font-weight: 700;
+    color: rgb(53, 53, 53);
+}
+.job-description {
+    color: var(--color-grey-1);
+    line-height: 28px;
+}
+.jobs > a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xs);
+    font-size: var(--size-sm);
+}
+
+.apply-button {
+    padding-top: var(--size-md);
+    display: block;
+    color: var(--color-accent);
+    font-family: var(--font-open-sans);
+    font-size: var(--size-sm);
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 640px) {
@@ -154,6 +214,19 @@
     }
     .blogs .blog-post .blog-post-image-wrapper {
         width: 100%;
+        max-width: 100%;
+    }
+    /* Offering */
+    .offerings-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .offering {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    /* Jobs */
+    .jobs {
         max-width: 100%;
     }
 }
